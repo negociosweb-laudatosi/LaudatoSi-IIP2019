@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/negociosweb-laudatosi/LaudatoSi-IIP2019#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
   }
 }
