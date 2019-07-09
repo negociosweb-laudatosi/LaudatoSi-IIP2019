@@ -1,0 +1,27 @@
+{
+  "name": "laudatosi-iip2019",
+  "version": "1.0.0",
+  "description": "Encíclica Laudato Sí",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/negociosweb-laudatosi/LaudatoSi-IIP2019.git"
+  },
+  "keywords": [
+    "Enciclica",
+    "LaudatoSí",
+    "Blog"
+  ],
+  "author": "GMHS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/negociosweb-laudatosi/LaudatoSi-IIP2019/issues"
+  },
+  "homepage": "https://github.com/negociosweb-laudatosi/LaudatoSi-IIP2019#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
