@@ -6,3 +6,7 @@ const app = express();
 
 // Inicializando el servidor de express en un puerto
 app.listen(9000);
+
+// Realizar la conexión a la base de datos mediante sequelize
+
+const db = require('./config/db');
