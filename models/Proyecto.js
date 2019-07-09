@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 
 //importar la configuración de la base de datos (/config/db.js)
-const db = requiere('../config/db');
+const db = require('../config/db.js');
 
 //Definimos los modelos a utilizar
 
@@ -80,7 +80,7 @@ const Categoria = db.define( 'categoria',{
     }
 });
 
-const Publicacion = db.define( 'categoria','publicacion',{
+const Publicacion = db.define( 'publicacion',{
     id:{
         type:Sequelize.INTEGER,
         primaryKey: true,

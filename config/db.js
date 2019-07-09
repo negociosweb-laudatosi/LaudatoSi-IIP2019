@@ -2,7 +2,7 @@
 const  Sequelize = require('sequelize');
 
 // definimos los parámetros de la conexión con la base de datos
-const db = new Sequelize('LaudatoSi', 'GMHS', 'GMHS2019', {
+const db = new Sequelize('LaudatoSi', 'root', '', {
     host : 'localhost',
     dialect : 'mysql',
     port : '3306',
