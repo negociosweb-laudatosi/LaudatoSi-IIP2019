@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 
 //importar la configuración de la base de datos (/config/db.js)
-const db = require('../config/db.js');
+const db = requiere('../config/db.js');
 
 //Definimos los modelos a utilizar
 
@@ -38,36 +38,6 @@ const Usuario = db.define( 'usuario',{
     }
 });
 
-const Comentario = db.define('comentario',{
-    id:{
-        type: Sequelize.INTEGER,
-        primaryKey:true,
-        autoIncrement:true
-
-    },
-
-    contenido:{
-        type: Sequelize.STRING
-    },
-
-    url:{
-        type: Sequelize.STRING
-    },
-
-    usuario:{
-        type: Sequelize.STRING
-    },
-    
-    ultimaModificacion:{
-        type:Sequelize.DATE
-    },
-
-    publicacion:{
-        type: Sequelize.INTEGER
-    }
-
-});
-
 const Categoria = db.define( 'categoria',{
     id:{
         type:Sequelize.INTEGER,
@@ -89,12 +59,27 @@ const Publicacion = db.define( 'publicacion',{
 
     categoria:{
         type:Sequelize.INTEGER
-    }
+    },
+
+    contenido:{
+        type: Sequelize.STRING
+    },
+
+    url:{
+        type: Sequelize.STRING
+    },
+
+    usuario:{
+        type: Sequelize.STRING
+    },
+    
+    ultimaModificacion:{
+        type:Sequelize.DATE
+    },
 });
 
 // importar los modelos para realizarlos
 
 module.exports = Usuario;
-module.exports = Comentario;
 module.exports = Categoria;
 module.exports = Publicacion;
