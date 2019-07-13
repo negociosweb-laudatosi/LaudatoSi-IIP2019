@@ -61,6 +61,10 @@ const Publicacion = db.define( 'publicacion',{
         type:Sequelize.INTEGER
     },
 
+    titulo:{
+        type: Sequelize.STRING
+    },
+
     contenido:{
         type: Sequelize.STRING
     },
