@@ -4,10 +4,8 @@ const express = require('express');
 // Importando las rutas disponibles
 const routes = require('./routes');
 
-<<<<<<< HEAD
 // Importando los módulos para direcciones
 const path = require('path');
-=======
 // Realizar la conexión a la base de datos mediante sequelize
 
 const db = require('./config/db');
@@ -17,7 +15,6 @@ require('./models/Proyecto');
 db.sync()
     .then(() => console.log('Conectado al servidor de BD'))
     .catch(error => console.log(error));
->>>>>>> reparaciones
 
 // Creando una App de express
 const app = express();
