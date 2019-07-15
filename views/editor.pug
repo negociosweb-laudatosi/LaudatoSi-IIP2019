@@ -1,0 +1,30 @@
+extends ./layout
+
+block contenido
+    // Main
+    #main-wrapper
+      .container
+        #main
+          .row
+            section.editor
+              header
+                h2.titulo-art Edición de Artículos
+              .formularioE
+                form(action='#')
+                  legend Favor llenar todos los datos
+                  .contenedor-campos
+                    .campo
+                      label(for='nombreA') Nombre del Artículo
+                      input#nombreArt(type='text', name='nombreArticulo', placeholder='Ingresa el nombre')
+                    .campo
+                      label Categoría del Artículo
+                      select#Categoria-Articulo(name='CategoriaA')
+                        option(value='1') Categoría 1
+                        option(value='2') Categoría 2
+                        option(value='3') Categoría 3
+                    .campo.width100
+                      label(for='mensaje') Mensaje
+                      textarea(name='mensaje')
+                  .enviar
+                    a.button(href='#') Guardar
+                    a.button(href='#') Cancelar
