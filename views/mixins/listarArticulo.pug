@@ -1,0 +1,31 @@
+mixin listarArticulo(articulos = {})
+    .container
+        #main
+            .row
+                #content.8u.skel-cell-important
+                    .listado-articulos
+                        ul
+                            if articulos.length
+                                each articulo in articulos
+                                    section
+                                        header
+                                            h2 #{articulo.titulo}
+                                            span.byline #{articulo.fecha}
+                                        p #{articulo.contenido}
+                                        a.button(href=`/articulos/${articulos.url}`) Leer más
+                #sidebar.4u
+                    section
+                        a.button(href='#') Crear artículo
+                        .listado-articulosrecientes
+                            ul.style1
+                                if articulosrecientes.length
+                                    each articulo in articulosrecientes
+                                        header
+                                            h2 Artículos recientes
+                                        li
+                                            p.date
+                                              a(href=`/articulos/${articulos.url}`)
+                                                | #{articulo.fecha}
+                                                b #{articulo.fecha}
+                                            p
+                                              a(href=`/articulos/${articulos.url}`) #{articulo.contenido}

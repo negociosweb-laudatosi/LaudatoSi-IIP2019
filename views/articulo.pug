@@ -1,0 +1,13 @@
+extends ./layout
+
+block contenido
+    .container
+        #main
+            .row
+                section
+                    header
+                        h2 #{articulo.titulo}
+                        span.byline #{articulo.fecha}
+                        a.button(href=`/articulos/${articulos.url}`) Modificar
+                        a.button(href=`/articulos/${articulos.url}`) Eliminar
+                    p #{articulo.contenido}
