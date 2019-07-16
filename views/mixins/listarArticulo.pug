@@ -18,7 +18,7 @@ mixin listarArticulo(articulos = {})
                         a.button(href='#') Crear artículo
                         .listado-articulosrecientes
                             ul.style1
-                                if articulosrecientes.length
+                                if (articulosrecientes)
                                     each articulo in articulosrecientes
                                         header
                                             h2 Artículos recientes

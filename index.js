@@ -19,6 +19,9 @@ db.sync()
 // Creando una App de express
 const app = express();
 
+//Definiendo donde se carga los archivos estáticos
+app.use(express.static('public'));
+
 // Habilitando Pug como  Template Engine
 app.set('view engine', 'pug');
 

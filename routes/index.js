@@ -7,12 +7,9 @@ const proyectosController = require
 ('../controllers/proyectosController');
 
 module.exports = function() {
-    // Agregando la ruta para el home
-    router.get('/', (req, res) => {
-        res.send('Index');
-    });
+    
 
-    router.get('/', proyectosController.proyectosHome);
-
+    router.get('/', proyectosController.Proyecto);
+    
     return router;
 } 
