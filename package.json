@@ -22,10 +22,23 @@
   },
   "homepage": "https://github.com/negociosweb-laudatosi/LaudatoSi-IIP2019#readme",
   "dependencies": {
+    "axios": "^0.19.0",
+    "concurrently": "^4.1.1",
     "express": "^4.17.1",
+    "express-validator": "^6.0.1",
     "mysql2": "^1.6.5",
-    "nodemon": "^1.19.1",
     "pug": "^2.0.4",
-    "sequelize": "^5.9.4"
+    "sequelize": "^5.8.12",
+    "shortid": "^2.2.14",
+    "slug": "^1.1.0",
+    "sweetalert2": "^8.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "babel-loader": "^8.0.6",
+    "nodemon": "^1.19.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   }
 }
