@@ -3,5 +3,5 @@ const Proyecto = require('../models/Proyecto');
 
 exports.Proyecto = async(req,res)=>{
     //TODO cargar todos los articulos y comentarios
-    res.render('index');
+    res.render('editor');
 };
