@@ -1,18 +1,19 @@
-mixin listarArticulo(articulos = {})
+mixin listarArticulo(losProyectos = {})
     .container
         #main
             .row
                 #content.8u.skel-cell-important
                     .listado-articulos
                         ul
-                            if articulos.length
-                                each articulo in articulos
-                                    section
-                                        header
-                                            h2 #{articulo.titulo}
-                                            span.byline #{articulo.fecha}
-                                        p #{articulo.contenido}
-                                        a.button(href=`/articulos/${articulos.url}`) Leer más
+                            if (losProyectos)
+                                each viene in losProyectos
+                                   li
+                                        section
+                                            header
+                                                h2 #{viene.titulo}
+                                                span.byline #{viene.ultimaModificacion}
+                                            p #{viene.contenido}
+                                            //a.button(href=`/articulos/${articulos.url}`) Leer más
                 #sidebar.4u
                     section
                         a.button(href='#') Crear artículo
