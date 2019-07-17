@@ -24,8 +24,12 @@ block contenido
                         option(value='2') Categoría 2
                         option(value='3') Categoría 3
                     .campo.width100
-                      label(for='mensaje') Mensaje
-                      textarea(name='mensaje')
+                      .edit
+                        script(src='https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest')
+                        script(src="/dist/bundle.js")
+                        
+
+
                   .enviar
                     a.button(href='#') Guardar
                     a.button(href='#') Cancelar
