@@ -20,6 +20,3 @@ exports.formularioCrear = async(req,res)=>{
     res.render('editor');
 };
 
-exports.crearArticulo = async(req,res)=>{
-    res.render('articulo');
-}
