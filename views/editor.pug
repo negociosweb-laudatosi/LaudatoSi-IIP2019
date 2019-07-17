@@ -1,7 +1,9 @@
 extends ./layout
 
 block contenido
-  
+    script(src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js')
+    script.
+        tinymce.init({selector:'textarea#edit'});
     // Main
     #main-wrapper
       .container
@@ -24,10 +26,10 @@ block contenido
                         option(value='1') Categoría 1
                         option(value='2') Categoría 2
                         option(value='3') Categoría 3
-                    .campo.width100
-                    .edit
-                      script(src="../public/dist/bundle.js")
+                    .campo-edit
+                        textarea#edit
                     
                   .enviar
                     a.button(href='#') Guardar
                     a.button(href='#') Cancelar
+
