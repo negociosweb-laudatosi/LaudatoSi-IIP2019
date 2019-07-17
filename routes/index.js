@@ -10,7 +10,6 @@ module.exports = function() {
     
 
     router.get('/', proyectosController.Proyecto);
-    router.get('/nuevo_articulo',proyectosController.formularioCrear);
-    router.get('/articulo',proyectosController.crearArticulo);
+    router.get('/nueva_publicacion',proyectosController.formularioCrear);
     return router;
 } 

@@ -13,10 +13,10 @@ mixin listarArticulo(losProyectos = {})
                                                 h2 #{viene.titulo}
                                                 span.byline #{viene.ultimaModificacion}
                                             p #{viene.contenido}
-                                            //a.button(href=`/articulos/${articulos.url}`) Leer más
+                                            a.button(href=`/articulos/${viene.url}`) Leer más
                 #sidebar.4u
                     section
-                        a.button(href='#') Crear artículo
+                        a.button(href='/nueva_publicacion') Crear artículo
                         .listado-articulosrecientes
                             ul.style1
                                 if (articulosrecientes)
