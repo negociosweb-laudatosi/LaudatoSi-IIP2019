@@ -968,3 +968,7 @@
 		text-decoration: none;
 		color: rgba(255,255,255,.6);
 	}			
+
+	h1, h2, a ,p{
+		color: #000000 !important;
+	}
