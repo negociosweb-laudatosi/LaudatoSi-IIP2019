@@ -24,7 +24,7 @@ exports.formularioCrear = async(req,res)=>{
 exports.guardarDatosArticulo = async (req,res)=>{
     console.log("ya entró");
     //verificamos que se traigan valores del formulario
-    var elTitulo = req.body.elContenido
+    var elTitulo = req.body.titulo
     //const {tinymce} = params.tinymce
     //arreglo para los errores
     let errores = [];
