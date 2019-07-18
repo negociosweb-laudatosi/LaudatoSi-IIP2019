@@ -10,6 +10,6 @@ const {body} = require('express-validator')
 module.exports = function() {
     router.get('/', proyectosController.Proyecto);
     router.get('/nueva_publicacion',proyectosController.formularioCrear);
-    router.post('/nueva_publicacion', body('titulo').not().isEmpty().trim().escape(),proyectosController.guardarDatosArticulo);
+    router.post('/nueva_publicacion',proyectosController.guardarDatosArticulo);
     return router;
 }  
