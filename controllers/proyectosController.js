@@ -18,5 +18,32 @@ exports.Proyecto = async(req,res)=>{
 
 exports.formularioCrear = async(req,res)=>{
     res.render('editor');
+
 };
 
+exports.guardarDatosArticulo = async (req,res)=>{
+    console.log("ya entró");
+    //verificamos que se traigan valores del formulario
+    var elTitulo = req.body.elContenido
+    //const {tinymce} = params.tinymce
+    //arreglo para los errores
+    let errores = [];
+    //verificando
+    if(!elTitulo){
+        errores.push({'texto':'No puedes guardar un articulo vacío'});
+    }
+    if(errores.length>0){
+        res.render('editor',{
+        errores
+    });
+    }else{
+        //guardamos los datos en la base de datos
+        console.log(elTitulo)
+        //await Proyecto.create({tinymce});
+
+        // Redirigir hacia la ruta principal
+        res.redirect('/');
+    }
+   
+
+}

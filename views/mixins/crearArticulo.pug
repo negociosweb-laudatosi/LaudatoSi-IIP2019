@@ -1,11 +1,12 @@
 mixin crearArticulo()
+    pre #{vardump(proyecto)}
     .formularioE
-        form(action='#')
+        form(action='#'  method="POST")
             legend Favor llenar todos los datos
             .contenedor-campos
                 .campo
-                    label(for='nombreA') Nombre del Artículo
-                    input#nombreArt(type='text', name='nombreArticulo', placeholder='Ingresa el nombre')
+                    label(for='titulo') Nombre del Artículo
+                    input(type='text' name='titulo' placeholder='Ingresa el nombre' id="titulo" )
                 .campo
                     label Categoría del Artículo
                     select#Categoria-Articulo(name='CategoriaA')
@@ -16,7 +17,7 @@ mixin crearArticulo()
                 .campo-edit
                     textarea#edit
                 .enviar
-                    a.button(href='#') Guardar
+                    input(type="submit" value="Guardar" class="button")
                     a.button(href='#') Cancelar
 
 
