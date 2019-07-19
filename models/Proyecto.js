@@ -27,7 +27,7 @@ const Publicacion = db.define( 'publicacion',{
     },
 
     contenido:{
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
     },
 
     url:{

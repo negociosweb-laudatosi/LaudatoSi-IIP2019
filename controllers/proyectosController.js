@@ -38,7 +38,7 @@ exports.guardarDatosArticulo = async (req,res)=>{
         usuario
     })
 
-   
+    res.redirect('/');
 
 }
 
