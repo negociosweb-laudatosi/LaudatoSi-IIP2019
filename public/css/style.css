@@ -11,11 +11,14 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
+	/* Fondo degradado */
 	body
 	{
-		background: #4AA0E4 url(images/img01.jpg) repeat;
+		background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+		background-attachment: fixed;
 	}
 
+	/* Propiedades del texto */
 	body,input,textarea,select
 	{
 		font-family: 'Roboto Condensed', sans-serif;
@@ -35,7 +38,7 @@
 			text-decoration: none;
 		}
 		
-	/* Change this to whatever font weight/color pairing is most suitable */
+	/* Texto con negrita */
 	strong, b
 	{
 		font-weight: bold;
@@ -47,13 +50,14 @@
 		font-style: italic;
 	}
 
-	/* Don't forget to set this to something that matches the design */
+	/* Personalización para texto de hipervínculos */
 	a
 	{
 		text-decoration: none;
 		color: #333;
 	}
 	
+	/* Hover sobre hipervínculos */
 	a:hover
 	{
 		text-decoration: underline;
@@ -104,13 +108,14 @@
 			font-size: 3em;
 		}
 
+		/* Estilo de subtítulo */
 		header .byline
 		{
 			display: block;
 			margin: 0.5em 0 0 0;
 			padding: 0 0 0.5em 0;
 			font-size: 1.6em;
-			color: #00A6FA;
+			color: #157f1f;
 		}
 		
 	footer
@@ -123,7 +128,7 @@
 		clear: both;
 	}
 
-	/* Sections/Articles */
+	/* Secciones / Artículos */
 	
 		section,
 		article
@@ -149,7 +154,7 @@
 			margin-bottom: 0;
 		}
 
-	/* Images */
+	/* Imagenes */
 
 		.image
 		{
@@ -194,7 +199,7 @@
 					width: auto;
 				}
 
-	/* Lists */
+	/* Listas */
 
 		ul.default
 		{
@@ -227,6 +232,7 @@
 			list-style: none;
 		}
 		
+			/* Borde debajo de los artículos */
 			ul.style1 li {
 				margin: 0px;
 				padding: 30px 0px 20px 0px;
@@ -238,20 +244,22 @@
 				text-decoration: none;
 			}
 			
-			ul.style1 p {
-			}
+			/* ul.style1 p {
+			} */
 			
+			/* Delineado en hover del hipervínculo de los artículos */
 			ul.style1 a:hover {
 				text-decoration: underline;
 			}
 			
+			/* Estilo de la fechas */
 			ul.style1 .date {
 				float: left;
 				width: 78px;
 				height: 78px;
 				margin: 0px 25px 0px 0px;
 				padding: 6px 0px 0px 0px;
-				background: url(images/img07.jpg) no-repeat left top;
+				background: url(images/fecha2.jpg) no-repeat left top;
 				line-height: normal;
 				letter-spacing: 1px;
 				text-align: center;
@@ -261,6 +269,7 @@
 				color: #FFFFFF;
 			}
 			
+			/* Estilo número */
 			ul.style1 .date b {
 				display: block;
 				margin: 5px 0px 0px 0px;
@@ -271,6 +280,7 @@
 				color: #FFFFFF;
 			}
 			
+			/* Estilo mes */
 			ul.style1 .date a {
 				color: #FFFFFF;
 			}
@@ -286,13 +296,15 @@
 
 	/* Buttons */
 		
+		/* Estilos para botones */
 		.button
 		{
 			position: relative;
 			display: inline-block;
 			margin-top: 0.5em;
 			padding: 0.80em 1.5em;
-			background: #4196d9;
+			background: #2a95ff;
+			border-bottom: 5px solid #437BA7;
 			text-decoration: none;
 			text-transform: uppercase;
 			font-size: 1.2em;
@@ -322,9 +334,9 @@
 		text-decoration: none;
 	}
 
-		.fa.solo
+		/* .fa.solo
 		{
-		}
+		} */
 		
 			.fa.solo span
 			{
@@ -782,9 +794,10 @@
 		color: #A5D0F2;
 	}
 
+	/* Barra de menu */
 	#menu-wrapper {
 		height: 90px;
-		background: url(images/img05.jpg) no-repeat center top;
+		background: url(images/barra.png) no-repeat center top;
 	}
 	
 	#nav {
@@ -811,8 +824,11 @@
 		color: #16576B;
 	}
 	
+	/* Opción del menú seleccionada */
 	#nav .active {
-		background: url(images/img01.jpg) repeat;
+		/* Fondo */
+		background: url(images/seleccionado.jpg) repeat;
+		/* Borde */
 		border-bottom: 5px solid #437BA7;
 		text-shadow: -1px -1px 0px #2C7485;
 		color: #FFFFFF;
@@ -839,7 +855,7 @@
 
 	#main-wrapper
 	{
-		background: url(images/img03.jpg) repeat;
+		background: url(images/fondo.jpg) repeat;
 	}
 
 	#main
@@ -858,6 +874,58 @@
 		font-size: 1.2em;
 	}
 
+	/* Inicia editor de artículos */
+	form {
+		padding: 2rem;
+		border-radius: 10px;
+		max-width: 800px;
+		margin-left: 150px;
+	}
+
+	@media (min-width: 768px) {
+	
+		.contenedor-campos {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		.campo {
+			flex: 0 0 calc(50% - 1rem);
+		}
+	}
+
+	.titulo-art {
+		text-align: center;
+	}
+
+	.campo {
+		display: flex;
+		margin-bottom: 1rem;
+		align-items: center;
+	}
+
+	.campo input[type="text"],
+	.campo textarea {
+		flex: 1;
+		height: 2rem;
+	}
+	.width100 {
+		flex: 0 0 100%;
+	}
+
+	.campo label {
+		padding-right: 11px;
+	}
+
+	.campo select {
+		padding-top: 9px;
+		padding-bottom: 7px;
+		padding-right: 30px;
+	}
+	
+	/* Final editor de artículos */
+
+	
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
@@ -865,7 +933,7 @@
 	#footer
 	{
 		position: relative;
-		background: #FFF url(images/img09.jpg) repeat;
+		background: #FFF url(images/footer.jpg) repeat;
 	}
 	
 	#footer header h2
@@ -887,12 +955,16 @@
 		color: rgba(255,255,255,.4);
 	}
 	
-	#copyright .container
+	/* #copyright .container
 	{
-	}
+	} */
 	
 	#copyright a
 	{
 		text-decoration: none;
 		color: rgba(255,255,255,.6);
 	}			
+
+	h1, h2, a ,p{
+		color: #000000 !important;
+	}

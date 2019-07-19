@@ -70,7 +70,7 @@
 
 	#titleBar
 	{
-		background: #4AA0E4 url(images/img01.jpg) repeat;
+		background: #4AA0E4 url(images/seleccionado.jpg) repeat;
 	}
 
 		#titleBar .title a
@@ -119,7 +119,7 @@
 
 	#navPanel
 	{
-		background: #4AA0E4 url(images/img01.jpg) repeat;
+		background: #4AA0E4 url(images/seleccionado.jpg) repeat;
 		box-shadow: inset -5px 0 0 0 rgba(0,0,0,0.1);
 	}
 

@@ -1,0 +1,39 @@
+mixin listarArticulo(losProyectos = {}, proyecto={})
+
+    .container
+        include crearArticulo
+        #main
+            .row
+                #content.8u.skel-cell-important
+                    .listado-articulos
+                        ul
+                            if (losProyectos)
+                                each viene in losProyectos
+                                   li
+                                        section
+                                            header
+                                                h2 #{viene.titulo}
+                                                span.byline #{viene.ultimaModificacion}
+                                            p #{viene.contenido}
+                                            a.button(href=`/${viene.id}`) Leer más
+
+
+                                            
+
+                #sidebar.4u
+                    section
+                        a.button(href='/nueva_publicacion') Crear artículo
+                        .listado-articulosrecientes
+                            ul.style1
+                                if (articulosrecientes)
+                                    each articulo in articulosrecientes
+                                        header
+                                            h2 Artículos recientes
+                                        li
+                                            p.date
+                                              a(href=`/articulos/${articulos.url}`)
+                                                | #{articulo.fecha}
+                                                b #{articulo.fecha}
+                                            p
+                                              a(href=`/articulos/${articulos.url}`) #{articulo.contenido}
+                                                

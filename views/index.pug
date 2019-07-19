@@ -1,0 +1,18 @@
+extends ./layout
+
+include mixins/listarArticulo
+
+
+
+block contenido
+    #banner
+        .container
+            .row
+                section
+                a.image.full(href='#')
+                   img(src="images/nicolas-prieto-h3deFHhXFI4-unsplash.jpg", alt="esta es la foto")
+
+        +listarArticulo(losProyectos)
+
+        
+        
