@@ -44,25 +44,25 @@ exports.guardarDatosArticulo = async (req,res)=>{
 
 // Seleccionamos el articulo segun su URL
 exports.articuloURL = async (req, res, next) => {
-    const articulos = Proyecto.findAll();
+    const proyectosPromise = Proyecto.findAll();
 
-    const articulo = Proyecto.findOne({
+    const proyectoPromise = Proyecto.findOne({
         where : {
             url : req.params.url
         }
     });
 
     // Promise con destructuring
-    const [articulos, articulo] = await Promise.all([articulos, articulo]);
+    const [proyectos, proyecto] = await Promise.all([proyectosPromise, proyectoPromise]);
 
 
     // Verificar si se obtiene un atículo en la consulta
-    if (!articulo) return next();
+    if (!proyecto) return next();
 
     // Mostrar la vista
     res.render('editor', {
-        articulos,
-        articulo
+        proyectos,
+        proyecto
     })
 
 }
@@ -70,21 +70,22 @@ exports.articuloURL = async (req, res, next) => {
 // Modificando/editando artículo
 exports.formularioEditar = async (req, res) => {
     // Obtener todos los modelos
-    const articulosPromise = Proyecto.findAll();
+    console.log(req.params.id)
+    const proyectosPromise = Proyecto.findAll();
 
     // Obtener el artículo a editar
-    const articuloPromise = Proyecto.finOne({
+    const proyectoPromise = Proyecto.findOne({
         where : {
             id : req.params.id
         }
     });
 
     // Promise con destructuring
-    const [articulos, articulo] = await Promise.all([articulosPromise, articuloPromise]);
+    const [proyectos, proyecto] = await Promise.all([proyectosPromise, proyectoPromise]);
 
     res.render('editor', {
-        articulos,
-        articulo
+        proyectos,
+        proyecto
     })
 };
 
@@ -94,7 +95,7 @@ exports.actualizarArticulo = async (req, res, next) => {
 
 
     //obtener todos los artículos
-    const articulos = await Proyecto.findAll();
+    const proyectos = await Proyecto.findAll();
 
     const {
         titulo, 

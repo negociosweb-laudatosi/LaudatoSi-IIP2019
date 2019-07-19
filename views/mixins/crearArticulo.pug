@@ -1,12 +1,12 @@
-mixin crearArticulo()
-    pre #{vardump(proyecto)}
+mixin crearArticulo(proyectos = {}, proyecto = {})
+    pre #{vardump(proyectos)}
     .formularioE
         form#get-data-form(action='/nueva_publicacion'  method="POST")
             legend Favor llenar todos los datos
             .contenedor-campos
                 .campo
                     label(for='titulo') Nombre del Artículo
-                    input(type='text' name='titulo' placeholder='Ingresa el nombre' id="titulo" required )
+                    input(type='text' name='titulo' placeholder='Ingresa el nombre' id="titulo" value=proyectos.titulo required )
                 .campo
                     label Categoría del Artículo
                     select#Categoria-Articulo(name='categoria')
@@ -15,10 +15,11 @@ mixin crearArticulo()
                         option(value='3') Biodiversidad
                 .campo
                     label(for='usuario') Creado por
-                    input(type='text' name='usuario' placeholder='Ingresa tu nombre' id="usuario" required )
+                    input(type='text' name='usuario' placeholder='Ingresa tu nombre' id="usuario" value =proyectos.usuario required )
                 .campo-edit
                     textarea#edit(name='contenido')
-                    input.button(type="submit" value="Guardar")
+                    input.button(type="submit" value=`${proyectos.titulo ? 'Guardar' : 'Agregar'}`)
+
                 .enviar
                     //- a.button(href='#') Guardar
                     a.button(href='#') Cancelar

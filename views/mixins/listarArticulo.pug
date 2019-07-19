@@ -1,5 +1,7 @@
-mixin listarArticulo(losProyectos = {})
+mixin listarArticulo(losProyectos = {}, proyecto={})
+
     .container
+        include crearArticulo
         #main
             .row
                 #content.8u.skel-cell-important
@@ -13,7 +15,11 @@ mixin listarArticulo(losProyectos = {})
                                                 h2 #{viene.titulo}
                                                 span.byline #{viene.ultimaModificacion}
                                             p #{viene.contenido}
-                                            a.button(href=`/articulos/${viene.url}`) Leer más
+                                            a.button(href=`/${viene.id}`) Leer más
+
+
+                                            
+
                 #sidebar.4u
                     section
                         a.button(href='/nueva_publicacion') Crear artículo
@@ -30,3 +36,4 @@ mixin listarArticulo(losProyectos = {})
                                                 b #{articulo.fecha}
                                             p
                                               a(href=`/articulos/${articulos.url}`) #{articulo.contenido}
+                                                

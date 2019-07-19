@@ -13,13 +13,12 @@ module.exports = function() {
     router.post('/nueva_publicacion',proyectosController.guardarDatosArticulo);
 
     // Actualizar
-
     // Mostrar el artículo mediante URL
     router.get('/articulos/:url',proyectosController.articuloURL);
 
     //Ruta para actualizar
-    router.get('/aticulo/editar/:id',proyectosController.formularioEditar);
-    router.get.post('/nueva_publicacion/:id',proyectosController.actualizarArticulo);
+    router.get('/:id',proyectosController.formularioEditar);
+    router.post('/nueva_publicacion/:id',proyectosController.actualizarArticulo);
 
 
     // Eliminar una tarea
