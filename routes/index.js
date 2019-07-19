@@ -15,5 +15,10 @@ module.exports = function() {
     // Eliminar una tarea
     router.delete('/eliminar_publicacion/:id',proyectosController.eliminarProyecto);
 
+    // Mostrar artículos por categoría
+    router.get('/contaminacion', proyectosController.categoriaContaminacion);
+    router.get('/ecologia', proyectosController.categoriaEcologia);
+    router.get('/biodiversidad', proyectosController.categoriaBiodiversidad);
+
     return router;
 }  

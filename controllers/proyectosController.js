@@ -60,3 +60,46 @@ exports.eliminarProyecto = async (req, res, next) => {
 
     res.send(200).send('eliminado correctamente');
 }
+
+// Cargar los artículos por categorías
+exports.categoriaContaminacion = async(req,res)=>{
+
+    const losArticulos = await Proyecto.findAll({
+        where : {
+            categoria : 1
+        }
+    });
+    res.render('articuloPorCategoria',{
+        losArticulos
+
+    });
+    
+}
+
+// Cargar los artículos por categorías
+exports.categoriaEcologia = async(req,res)=>{
+    const losArticulos = await Proyecto.findAll({
+        where : {
+            categoria : 2
+        }
+    });
+    res.render('articuloPorCategoria',{
+        losArticulos
+
+    });
+    
+}
+
+// Cargar los artículos por categorías
+exports.categoriaBiodiversidad = async(req,res)=>{
+    const losArticulos = await Proyecto.findAll({
+        where : {
+            categoria : 3
+        }
+    });
+    res.render('articuloPorCategoria',{
+        losArticulos
+
+    });
+    
+}
