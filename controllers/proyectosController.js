@@ -18,5 +18,43 @@ exports.Proyecto = async(req,res)=>{
 
 exports.formularioCrear = async(req,res)=>{
     res.render('editor');
+
 };
 
+exports.guardarDatosArticulo = async (req,res)=>{
+    console.log("ya entró");
+    let errores = [];
+    //verificando
+    
+    const {titulo,categoria,contenido}= req.body;
+    console.log(req.body);
+    console.log("----------------------------");
+    console.log(req.body.contenido)
+    await Proyecto.create({
+        categoria,
+        titulo,
+        contenido
+    })
+
+   
+
+}
+
+//Eliminando tarea
+exports.eliminarProyecto = async (req, res, next) => {
+    // Obtener el id mediante query o params
+    const { id } = req.params;
+
+    // Eliminar el artículo
+    const resultado = await Proyecto.destroy({
+        where : {
+            id : id
+        }
+    });
+
+    if(!resultado) {
+        return next();
+    }
+
+    res.send(200).send('eliminado correctamente');
+}
