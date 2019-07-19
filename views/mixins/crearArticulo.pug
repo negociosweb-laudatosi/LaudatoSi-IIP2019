@@ -1,6 +1,6 @@
 mixin crearArticulo()
     .formularioE
-        form(action='#')
+        form#get-data-form(action='#')
             legend Favor llenar todos los datos
             .contenedor-campos
                 .campo
@@ -15,9 +15,12 @@ mixin crearArticulo()
                         option(value='3') Categoría 3
                 .campo-edit
                     textarea#edit
+                    input(type="submit" value="Get Data")
                 .enviar
-                    a.button(href='#') Guardar
+                    //- a.button(href='#') Guardar
                     a.button(href='#') Cancelar
+                #data-container
+                script(src='/js/getdata.js')
 
 
 
