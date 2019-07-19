@@ -1,7 +1,11 @@
 mixin crearArticulo()
     pre #{vardump(proyecto)}
     .formularioE
+<<<<<<< HEAD
         form(action='/nueva_publicacion'  method="POST")
+=======
+        form#get-data-form(action='#')
+>>>>>>> Editor-Tinymce
             legend Favor llenar todos los datos
             .contenedor-campos
                 .campo
@@ -14,10 +18,19 @@ mixin crearArticulo()
                         option(value='2') Ecología
                         option(value='3') Biodiversidad
                 .campo-edit
+<<<<<<< HEAD
                     textarea#contenido
                 .enviar
                     input(type="submit" value="Guardar" class="button")
+=======
+                    textarea#edit
+                    input(type="submit" value="Get Data")
+                .enviar
+                    //- a.button(href='#') Guardar
+>>>>>>> Editor-Tinymce
                     a.button(href='#') Cancelar
+                #data-container
+                script(src='/js/getdata.js')
 
 
 
