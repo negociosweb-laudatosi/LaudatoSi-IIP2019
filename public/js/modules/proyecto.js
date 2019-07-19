@@ -1,11 +1,11 @@
-//importar  el modulo de froala-editor
-import FroalaEditor from 'froala-editor'
 
-//importando swal
-import Swal from "sweetalert2";
-
-
-// Eliminar tarea
+/*/importando swal
+import Swal from 'sweetalert2';
+import Axios from 'axios';
+// Obtener el botón desde el DOM
+const btnEliminar = document.querySelector('#eliminar-proyecto');
+btnEliminar.addEventListener('click', e => {
+    // Eliminar tarea
 if  (e.target.classList.contains('id')){
     // Obteniendo el HTML del articulo
     // Necesitamos acceder al elemento HTML <li></li>
@@ -45,3 +45,5 @@ if  (e.target.classList.contains('id')){
         }
     })
 }
+});
+*/

@@ -32,7 +32,7 @@ const Publicacion = db.define( 'publicacion',{
     },
     
     ultimaModificacion:{
-        type:Sequelize.DATE
+        type:Sequelize.STRING
     },
 });
 

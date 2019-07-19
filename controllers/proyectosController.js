@@ -1,6 +1,5 @@
 // importar los modelos a utilizar
 const Proyecto = require('../models/Proyecto');
-const Usuario = require('../models/Usuario');
 const Categoria = require('../models/Categoria');
 
 exports.Proyecto = async(req,res)=>{
@@ -26,14 +25,17 @@ exports.guardarDatosArticulo = async (req,res)=>{
     let errores = [];
     //verificando
     
-    const {titulo,categoria,contenido}= req.body;
-    console.log(req.body);
-    console.log("----------------------------");
-    console.log(req.body.contenido)
+    const {titulo,categoria,contenido, usuario}= req.body;
+    
+    //vamos a capturar la fecha de posteo
+    let f = new Date();
+    let ultimaModificacion= (f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear() + f.getHours()+":"+f.getMinutes()) ;
     await Proyecto.create({
         categoria,
         titulo,
-        contenido
+        contenido,
+        ultimaModificacion,
+        usuario
     })
 
    
