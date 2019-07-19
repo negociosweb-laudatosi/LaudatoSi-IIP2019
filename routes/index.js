@@ -8,8 +8,12 @@ const proyectosController = require('../controllers/proyectosController');
 const {body} = require('express-validator')
 
 module.exports = function() {
-    router.get('/', proyectosController.Proyecto);
+    router.get('/',proyectosController.Proyecto);
     router.get('/nueva_publicacion',proyectosController.formularioCrear);
     router.post('/nueva_publicacion',proyectosController.guardarDatosArticulo);
+
+    // Eliminar una tarea
+    router.delete('/eliminar_publicacion/:id',proyectosController.eliminarProyecto);
+
     return router;
 }  

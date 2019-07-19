@@ -39,3 +39,22 @@ exports.guardarDatosArticulo = async (req,res)=>{
    
 
 }
+
+//Eliminando tarea
+exports.eliminarProyecto = async (req, res, next) => {
+    // Obtener el id mediante query o params
+    const { id } = req.params;
+
+    // Eliminar el artículo
+    const resultado = await Proyecto.destroy({
+        where : {
+            id : id
+        }
+    });
+
+    if(!resultado) {
+        return next();
+    }
+
+    res.send(200).send('eliminado correctamente');
+}
