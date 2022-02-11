@@ -28,7 +28,7 @@
     "concurrently": "^4.1.1",
     "express": "^4.17.1",
     "express-validator": "^6.0.1",
-    "froala-editor": "^3.0.3",
+    "froala-editor": "^4.0.7",
     "html2jade": "^0.8.6",
     "mysql2": "^1.6.5",
     "pug": "^2.0.4",
